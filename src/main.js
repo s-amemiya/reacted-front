@@ -1,9 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './components/app'
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
 
-ReactDOM.render(
-  <div>
-    <h2>hello!!</h2>
-    <button>push me from react</button>
-  </div>,
-  document.getElementById('root'));
+ReactDOM.render((
+  <BrowserRouter>
+    <Route path="/" component={App} />
+  </BrowserRouter>)
+  , document.getElementById('root'));
